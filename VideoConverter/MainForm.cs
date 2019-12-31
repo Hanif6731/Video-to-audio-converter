@@ -14,10 +14,22 @@ namespace VideoConverter
 {
     public partial class MainForm : MetroForm
     {
+        //private static MainForm mf;
+        private settingsForm sf;
+        private bool sfInitialized = false;
+        public MainForm Mf
+        {
+            get { return this; }
+        }
+
         public MainForm()
         {
             InitializeComponent();
-            
+             //sf= new settingsForm();
+            //this.Visible = true;
+            this.Theme = Program.apptheme;
+            this.Style = Program.appStyle;
+
         }
 
         private void FromFolderToolStripMenuItem_Click(object sender, EventArgs e)
@@ -52,6 +64,30 @@ namespace VideoConverter
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void blackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void darkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void lightToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //if (!sfInitialized)
+            sf = new settingsForm();
+            sf.Visible = true;
+            this.Visible = false;
+            //this.st
         }
     }
 }

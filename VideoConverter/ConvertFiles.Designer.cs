@@ -228,11 +228,13 @@
             this.Name = "ConvertFiles";
             this.Text = "ConvertSingleFile";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ConvertSingleFile_FormClosed);
+            this.Controls.SetChildIndex(this.metroPanel1, 0);
             this.metroPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

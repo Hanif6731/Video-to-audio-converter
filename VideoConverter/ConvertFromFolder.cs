@@ -17,7 +17,7 @@ using NReco.VideoInfo;
 namespace VideoConverter
 {
     
-    public partial class ConvertFromFolder : MetroForm
+    public partial class ConvertFromFolder : MainForm
     {
         
         string[] videoFormats = { "mp4", "3gp", "wmv","mkv","avi","flv","webm" };
@@ -52,7 +52,7 @@ namespace VideoConverter
                         this.input.Add(file);
                     }
                 }
-                this.listVideo.Visible = true;
+                //this.listVideo.Visible = true;
                 this.btnDestination.Enabled = true;
             }
         }

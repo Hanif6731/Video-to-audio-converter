@@ -139,14 +139,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoConverter.exe" size="164832">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VideoConverter.exe" size="168416">
       <assemblyIdentity name="VideoConverter" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/0WPaWAzVwCyHuZLaTo4tkJmQIL0wlahh810s3cCI5k=</dsig:DigestValue>
+        <dsig:DigestValue>TZJM43tXOQlp66ifb7YFYvl9P/GwzOw2gbgWfkpEsIc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
