@@ -12,6 +12,7 @@ using MetroFramework.Forms;
 using NReco;
 using NReco.VideoInfo;
 using NReco.VideoConverter;
+using System.IO;
 
 namespace VideoConverter
 {
@@ -55,7 +56,7 @@ namespace VideoConverter
                     }
                 }
                 this.txtVideo.Text = files[0].Substring(0,files[0].LastIndexOf('\\')+1);
-               // this.listVideo.Visible = true;
+               this.listVideo.Visible = true;
                 this.btnDestination.Enabled = true;
             }
         }
@@ -80,6 +81,7 @@ namespace VideoConverter
             int i = 0;
             this.lblCurrentFile.Visible = true;
             this.pbProgress.Visible = true;
+            this.listVideo.Visible = true;
             this.listAudio.Visible = true;
             this.pbTotalProgress.Visible = true;
             this.pbProgress.Maximum = 100;
@@ -93,9 +95,9 @@ namespace VideoConverter
                 {
                     this.pbProgress.Value = 0;
                     this.processedItem = i + 1;
-                    this.listVideo.SetSelected(i, true);
-                    string outputFile = this.listVideo.SelectedItem.ToString();
-                    outputFile = outputFile.Substring(0, outputFile.LastIndexOf('.'));
+                    //var item = this.listVideo.Items[i];
+                    //string outputFile = item.ToString();
+                    var outputFile = Path.GetFileNameWithoutExtension(file); //outputFile.Substring(0, outputFile.LastIndexOf('.'));
                     this.lblCurrentFile.Text = "Converting: " + file;
                     var ConvertToAudio = new NReco.VideoConverter.FFMpegConverter();
                     var ffprobe = new NReco.VideoInfo.FFProbe();
