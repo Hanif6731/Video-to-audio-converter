@@ -90,9 +90,9 @@ namespace VideoConverter
                 {
                     this.pbProgress.Value = 0;
                     this.processedItem=i+1;
-                    this.listVideo.SetSelected(i, true);
-                    string outputFile = this.listVideo.SelectedItem.ToString();
-                    outputFile = outputFile.Substring(0, outputFile.LastIndexOf('.'));
+                    //this.listVideo.SetSelected(i, true);
+                    var outputFile = Path.GetFileNameWithoutExtension(file); //this.listVideo.SelectedItem.ToString();
+                    //outputFile = outputFile.Substring(0, outputFile.LastIndexOf('.'));
                     this.lblCurrentFile.Text = "Converting: " + file;
                     var ConvertToAudio = new NReco.VideoConverter.FFMpegConverter();
                     var ffprobe = new NReco.VideoInfo.FFProbe();
